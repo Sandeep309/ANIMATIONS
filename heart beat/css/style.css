@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #000;
+}
+.box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #262626;
+	padding: 70px;
+	border-radius: 50%;
+	box-shadow: 10px 10px 35px grey;
+	border: 10px solid #fff;
+}
+.heart{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background-color: pink;
+	transform: rotate(45deg);
+	box-shadow: 10px 0px 35px pink;
+	animation: dhak .5s infinite alternate;
+
+}
+.heart:before{
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-color: pink;
+	top: -50%;
+	left: 0;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+}
+
+.heart:after{
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-color: pink;
+	top: 0;
+	right: 50%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+@keyframes dhak{
+	0%{transform: scale(1) rotate(45deg) ;}
+	50%{transform: scale(1.5) rotate(45deg);}
+	100%{transform: scale(1) rotate(45deg);}
+}

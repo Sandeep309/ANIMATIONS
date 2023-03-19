@@ -1,0 +1,45 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+$primaryColor: rgb(144, 30, 210);
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: $primaryColor;
+}
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 10vw;
+  z-index: 999;
+  font-weight: 700;
+  line-height: 0.6em;
+
+  & span {
+    font-size: 0.2em;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+.block {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background: $primaryColor;
+
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+}
